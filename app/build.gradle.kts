@@ -56,4 +56,29 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    // ... otras dependencias ...
+
+    // OkHttp (Cliente HTTP base)
+
+    
+    // Iconos extendidos (Para Icons.Filled.Person, etc.)
+
+
+    // Retrofit (Para conexión de red)
+    implementation(libs.retrofit)
+    // Gson converter for Retrofit
+    implementation(libs.converter.gson)
+
+
+
+    // Gson Converter (Para convertir JSON a objetos Kotlin)
+    implementation(libs.gson.v2101)
+
+    // Lifecycle & ViewModel para Compose
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.compose.material.icons.extended)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.coil.compose.v260)
+
+
 }
