@@ -4,7 +4,8 @@ import com.google.gson.annotations.SerializedName
 
 // --- MODELO UI / DTO (Lo que recibimos del GET) ---
 data class MarcaDto(
-    @SerializedName("marca_id") val id: Int,
+    // El servidor envía "brand_id"
+    @SerializedName("brand_id") val id: Int,
     @SerializedName("nombre") val nombre: String
 )
 
@@ -12,11 +13,12 @@ data class MarcaDto(
 
 // Para Insertar y Actualizar
 data class MarcaRequest(
-    @SerializedName("marca_id") val id: Int? = null, // Null al insertar, Obligatorio al actualizar
+    // Asumimos que el servidor también espera "brand_id" para actualizar
+    @SerializedName("brand_id") val id: Int? = null,
     val nombre: String
 )
 
-// Para Eliminar: El backend espera { "marca_id": X }
+// Para Eliminar: El backend espera { "brand_id": X }
 data class DeleteMarcaRequest(
-    @SerializedName("marca_id") val id: Int
+    @SerializedName("brand_id") val id: Int
 )
